@@ -4,7 +4,7 @@ This project contains a variety of textbook examples and labs focused on Java la
 
 ## Getting Started
 
-To get started with this project please follow these instructions:
+Please follow these instructions to get started on the projects:
 ```
 1) If you have not already installed Git - please do so: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 2) $ git clone https://github.com/codingnomads/online-java-fundamentals.git
