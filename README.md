@@ -1,4 +1,4 @@
-# CodingNomads Java Fundamentals  -- Daniel's Edit
+# CodingNomads Java Fundamentals  -- Daniel's Edit branch
 
 This project contains a variety of textbook examples and labs focused on Java labs_examples.fundamentals.
 
