@@ -9,5 +9,15 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        char[][] myArr = {{'a', 'b', 'c'}, {'d', 'e'}};
+
+        for(char[] c: myArr) {
+            for(char ci: c) {
+                System.out.print(ci + " ");
+            }
+            System.out.println(" ");
+        }
+    }
 
 }

@@ -2,8 +2,6 @@ package labs_examples.arrays.labs;
 
 /**
  *  Reversing an array in place
- *
- *
  *      This is a very common interview challenge.
  *
  *      Using a for loop, please demonstrate how to reverse the nums[] array in place using only one extra variable. Please note,
