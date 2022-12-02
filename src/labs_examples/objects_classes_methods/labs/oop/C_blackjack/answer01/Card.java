@@ -1,27 +1,38 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack.answer01;
 
 public class Card {
-    private int cardValue;
-    private char[] suit = new char[]{'♠', '♦', '♥', '♣'};
+    private int scoreValue;
+//    private char[] suit = new char[]{'♠', '♦', '♥', '♣'};
+    private char suit;
+    private String value;
 
-    public Card(int cardValue, char[] suit) {
-        this.cardValue = cardValue;
+    public Card(char suit, String value) {
         this.suit = suit;
+        this.value = value;
     }
 
-    public int getCardValue() {
-        return cardValue;
+    public String customToString() {
+        return suit + value + suit;
     }
 
-    public void setCardValue(int cardValue) {
-        this.cardValue = cardValue;
+    public int getScoreValue() {
+        try {
+            return Integer.valueOf(value);
+        } catch (Exception e) {
+            if(value.equalsIgnoreCase("ACE")) {
+                return 11;
+            } else {
+                return 10;
+            }
+        }
     }
 
-    public char[] getSuit() {
-        return suit;
-    }
-
-    public void setSuit(char[] suit) {
-        this.suit = suit;
+    @Override
+    public String toString() {
+        return "Card{" +
+                "scoreValue=" + scoreValue +
+                ", suit=" + suit +
+                ", value='" + value + '\'' +
+                '}';
     }
 }
