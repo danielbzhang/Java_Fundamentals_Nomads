@@ -18,6 +18,14 @@ public class ClassA {
     }
 
     public double nonStaticMehod1(double a, double b) {
+        nonStaticMethod2();
+        staticMethod2();
         return a + b;
+    }
+
+    public void nonStaticMethod2() {
+        System.out.println("Calling non static method 2!!");
+        ClassB obj2 = new ClassB();
+        obj2.nonStaticMethodB1();
     }
 }
