@@ -18,6 +18,7 @@ class RelationalOperators {
         }
 
         // write your code below
+        System.out.println(a >= b);
 
     }
 

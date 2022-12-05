@@ -18,6 +18,18 @@ class LogicalOperators {
         }
 
         // write your code below
+        if(a & b) {
+            System.out.println("a and b is true");
+        }
+
+        if(a || b) {
+            System.out.println("a short-circuit b is true");
+        }
+
+        if(a && b) {
+            System.out.println("a short-circuit b is false");
+        }
+
 
     }
 
