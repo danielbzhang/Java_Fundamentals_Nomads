@@ -6,8 +6,8 @@ public class ClassAA {
 
     protected static void methodA1() {
         System.out.println("Calling methodA1...");
-        int result = ClassBB.methodB2(1,2);
-        System.out.println(result);
+//        int result = ClassBB.methodB2(1,2);
+//        System.out.println(result);
     }
 
     static void methodA2() {
