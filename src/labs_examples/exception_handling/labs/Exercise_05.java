@@ -26,7 +26,6 @@ class Example {
         } catch (ArrayIndexOutOfBoundsException exc) {
             System.out.println(exc.toString());
         }
-
     }
 
     public static void methodTwo() throws ArrayIndexOutOfBoundsException {
