@@ -26,8 +26,8 @@ class Example02 {
         String fileOutPath2 = "src/labs_examples/input_output/files/KtoDOut02.txt";
         int j;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileInPath)); PrintWriter pw = new PrintWriter(new FileWriter(fileOutPath))) {
-
+        try (BufferedReader br = new BufferedReader(new FileReader(fileInPath));
+             PrintWriter pw = new PrintWriter(new FileWriter(fileOutPath))) {
 
             while ((i = br.read()) != -1) {
                 if ((char) i == 't') {
