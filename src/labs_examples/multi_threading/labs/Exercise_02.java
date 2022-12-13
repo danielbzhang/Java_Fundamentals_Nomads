@@ -8,7 +8,8 @@ package labs_examples.multi_threading.labs;
 
 class Thread02Controller {
     public static void main(String[] args) {
-
+        Thread02 myFirstThread = new Thread02("My first thread...");
+        Thread02 mySecondThread = new Thread02("My second thread...");
     }
 }
 
