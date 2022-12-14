@@ -1,6 +1,7 @@
 package labs_examples.generics.labs;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 
 /**
@@ -49,5 +50,23 @@ class GenericExample2 {
         }
 
         return result;
+    }
+
+    public static <T> void swap(T[] arr, int pos1, int pos2) {
+        T temp = arr[pos1];
+        arr[pos1] = arr[pos2];
+        arr[pos2] = temp;
+
+        System.out.println("arr after swapping: " + Arrays.toString(arr));
+    }
+
+    public static <T extends Comparable<T>> T max(T[] arr, int begin, int end) {
+        T maxEle = arr[begin];
+        for (int i = begin; i <= end; i++) {
+            if(maxEle.compareTo(arr[i]) < 0) {
+                maxEle = arr[begin];
+            }
+        }
+        return maxEle;
     }
 }
