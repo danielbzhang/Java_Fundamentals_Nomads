@@ -20,7 +20,20 @@ import java.util.Collection;
 
 class GenericExample2 {
     public static void main(String[] args) {
+        // test 1
+        System.out.println(addDouble(1, 25));
 
+        // test 2
+        Collection<String> arr = Arrays.asList("abba", "101", "vl");
+        System.out.println(countPalin(arr));
+
+        // test 3
+        Character[] charArr = {'a', 'b', 'c', 'd', 'e'};
+        swap(charArr, 1,3);
+
+        // test 4
+        Double[] doubleArr = {1.1, 3.3, 4.0, 10.26, -2.98, 0.0, 45.83};
+        System.out.println(max(doubleArr, 1, 6));
     }
 
     public static <T extends Number, U extends Number> double addDouble(T a, U b) {
@@ -62,9 +75,9 @@ class GenericExample2 {
 
     public static <T extends Comparable<T>> T max(T[] arr, int begin, int end) {
         T maxEle = arr[begin];
-        for (int i = begin; i <= end; i++) {
-            if(maxEle.compareTo(arr[i]) < 0) {
-                maxEle = arr[begin];
+        for (int i = begin+1; i <= end; i++) {
+            if (maxEle.compareTo(arr[i]) < 0) {
+                maxEle = arr[i];
             }
         }
         return maxEle;
