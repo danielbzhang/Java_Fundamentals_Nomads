@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiPredicate;
 
+import static labs_examples.lambdas.labs.MethodReference.findNumbers;
+
 /**
  * Lambdas Exercise 3:
  *
@@ -29,12 +31,14 @@ class MethodReference {
         }
         return newList;
     }
+}
 
+class MethodReferenceController{
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(12, 5, 45, 18, 33, 24, 40);
 
         // Using a lambda expression
-        findNumbers(list, (i1, i2) -> isMoreThanFifty(i1, i2));
+        findNumbers(list, (i1, i2) -> MethodReference.isMoreThanFifty(i1, i2));
         // Using a method reference
         System.out.println(findNumbers(list, MethodReference :: isMoreThanFifty));
     }
