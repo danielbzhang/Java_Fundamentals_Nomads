@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -49,13 +52,35 @@ class Example {
         int sum3 = IntStream.range(1, 20).reduce(0, (int a, int b) -> a + b);
 //        System.out.println(sum3);
 
-        // 6, 7, 8
+        // 6
         String fileAddress = "src/labs_examples/lambdas/labs/stream_text_lab.csv";
         Stream<String> file = Files.lines(Paths.get(fileAddress));
 //        file.forEach(System.out :: println);
-        file.close();
+
+        // 7
+//        file.map(x -> x.split(","))
+//                .filter(x -> x.length == 3)
+//                .forEach(x -> System.out.println(x[1]));
+
+        // 8
+
 
         // 9
+
+        // 10
         
+        // 11
+        Stream<String> result = Files.lines(Paths.get(fileAddress));
+        Map<String, Double> map = new HashMap<>();
+        map = result
+                .map(x -> x.split(","))
+                .collect(Collectors.toMap(
+                        x -> x[0],
+                        x -> Double.parseDouble(x[2])
+                ));
+        file.close();
+        for(String key : map.keySet()) {
+            System.out.println(key+" "+map.get(key));
+        }
     }
 }
