@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -66,9 +67,14 @@ class Example {
 
 
         // 9
+        List<Integer> list = Arrays.asList(3, 4, 5, 16, 7, 68, 29);
+        boolean answer1 = list.stream().anyMatch(x -> x % 5 == 0);
+        System.out.println(answer1);
 
-        // 10
-        
+        // 10 (keep using the list above)
+        boolean answer2 = list.stream().allMatch(x -> x%3 == 0);
+        System.out.println(answer2);
+
         // 11
         Stream<String> result = Files.lines(Paths.get(fileAddress));
         Map<String, Double> map = new HashMap<>();
@@ -79,8 +85,8 @@ class Example {
                         x -> Double.parseDouble(x[2])
                 ));
         file.close();
-        for(String key : map.keySet()) {
-            System.out.println(key+" "+map.get(key));
+        for (String key : map.keySet()) {
+            System.out.println(key + " " + map.get(key));
         }
     }
 }
