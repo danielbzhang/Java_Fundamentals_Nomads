@@ -64,7 +64,11 @@ class Example {
 //                .forEach(x -> System.out.println(x[1]));
 
         // 8
-
+        file.map(x -> x.split(","))
+                .filter(x -> x.length == 3)
+                .forEach(x -> System.out.println(x[2]));
+//                .collect(Collectors.toList());
+//                .reduce(0.0, (a, b) -> a + Double.parseDouble(b));
 
         // 9
         List<Integer> list = Arrays.asList(3, 4, 5, 16, 7, 68, 29);
