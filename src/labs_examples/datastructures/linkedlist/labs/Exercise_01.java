@@ -1,5 +1,8 @@
 package labs_examples.datastructures.linkedlist.labs;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *      LinkedLists - Exercise_01
  *
@@ -21,3 +24,9 @@ package labs_examples.datastructures.linkedlist.labs;
  *      14) listIterator()
  *      15) clear()
  */
+
+class LinkedListDemo{
+    public static void main(String[] args) {
+        List<String> ll = new LinkedList<>();
+    }
+}
