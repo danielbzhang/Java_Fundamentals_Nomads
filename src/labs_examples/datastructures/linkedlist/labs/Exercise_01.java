@@ -1,5 +1,6 @@
 package labs_examples.datastructures.linkedlist.labs;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
@@ -66,6 +67,7 @@ class LinkedListDemo{
         System.out.println(ll.contains("Nick"));
 
         ListIterator<String> ite = ll.listIterator();
+//        Iterator ite = ll.iterator();
         while(ite.hasNext()) {
             System.out.println(ite.next());
         }
