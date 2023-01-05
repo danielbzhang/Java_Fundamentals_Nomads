@@ -11,3 +11,32 @@ package labs_examples.datastructures.linkedlist.labs;
  *      Also, instead of using the index in the get() and remove() methods, these methods should
  *      get() and remove() based by the Node's value, not it's index.
  */
+
+class CustomeLinkedList<T> {
+    private Node head;
+
+    public CustomeLinkedList(T... data) {
+        if(data.length < 1) {
+            head = null;
+        } else {
+            for (int i = 0; i < data.length; i++) {
+                // add(data[i]);
+            }
+        }
+    }
+}
+
+class Node<T> {
+    T data;
+    Node next;
+
+    public Node(T data) {
+        this.data = data;
+        this.next = null;
+    }
+
+    public Node(T data, Node node) {
+        this.data = data;
+        this.next = node;
+    }
+}
