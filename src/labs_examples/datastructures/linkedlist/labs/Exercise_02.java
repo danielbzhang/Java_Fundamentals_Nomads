@@ -20,9 +20,57 @@ class CustomeLinkedList<T> {
             head = null;
         } else {
             for (int i = 0; i < data.length; i++) {
-                // add(data[i]);
+                 add(data[i]);
             }
         }
+    }
+
+    public void add(T data) {
+        insert(data, size());
+    }
+
+    public void insert(T data, int index) {
+        if(head == null) {
+            head = new Node(data);
+        } else {
+            Node iterator = head;
+            Node previous = null;
+
+            if(index == 0) {
+                head = new Node(data, head);
+            } else if(index < size()) {
+                int count = 0;
+                while(count != index) {
+                    previous = iterator;
+                    iterator = iterator.next;
+                    count++;
+                }
+
+                previous.next = new Node(data, iterator);
+            } else {
+                while(iterator.next != null) {
+                    iterator = iterator.next;
+                }
+
+                iterator.next = new Node(data);
+            }
+        }
+    }
+
+    public int size() {
+        int count = 0;
+        Node iterator = head;
+
+        while(iterator != null) {
+            count++;
+            iterator = iterator.next;
+        }
+
+        return count;
+    }
+
+    public boolean isEmpty() {
+        return head == null;
     }
 }
 
