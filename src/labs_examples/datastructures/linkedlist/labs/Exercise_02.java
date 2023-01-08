@@ -57,6 +57,36 @@ class CustomeLinkedList<T> {
         }
     }
 
+    public void remove(int index) {
+        if(index == 0) {
+            head = head.next;
+        } else if(index < size()) {
+            try{
+                int count = 0;
+                Node previous = null;
+                Node iterator = head;
+
+                while (count != index) {
+                    previous = iterator;
+                    iterator = iterator.next;
+                    count++;
+                }
+
+                previous.next = iterator.next;
+
+            } catch(NullPointerException ex) {
+                System.out.println("Invalid index");
+            }
+        } else {
+            Node iterator = head;
+            while (iterator.next != null) {
+                iterator = iterator.next;
+            }
+
+            iterator.next = null;
+        }
+    }
+
     public int size() {
         int count = 0;
         Node iterator = head;
