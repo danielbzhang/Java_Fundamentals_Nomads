@@ -57,6 +57,52 @@ class CustomeLinkedList<T> {
         }
     }
 
+    public T get(int index) {
+        try {
+            // simple variable to use for looping over the list
+            int count = 0;
+
+
+            // creating a new variable that initially references the "head" node
+            // we'll use this new variable to traverse across the list
+            Node iterator = head;
+
+
+            // iterate until index is reach
+            while (count != index) {
+                iterator = iterator.next;
+                count++;
+            }
+            return (T) iterator.data;
+
+
+        } catch (NullPointerException ex) {
+            return null; // list is empty
+        }
+    }
+
+    public void set(int index, T data) {
+        try {
+            int count = 0;
+            Node iterator = head;
+
+
+            // iterate through list
+            while (count != index) {
+                iterator = iterator.next;
+                count++;
+            }
+
+
+            // change data
+            iterator.data = data;
+
+
+        } catch (NullPointerException ex) {
+            System.out.println("invalid index");
+        }
+    }
+
     public void remove(int index) {
         if(index == 0) {
             head = head.next;
