@@ -150,6 +150,7 @@ class CustomeLinkedList<T> {
     }
 }
 
+/* Node generic class */
 class Node<T> {
     T data;
     Node next;
